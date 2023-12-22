@@ -15,7 +15,7 @@ st.markdown(big_title,unsafe_allow_html=True)
 st.write('---')
 
 st.markdown('<b style="font-family:sans-serif; color:Black; font-size:30px;">Record yourself explaining something</b>',unsafe_allow_html=True)
-print(os.listdir())
+st.write(os.listdir())
 audio = audiorecorder("Click to record", "Click to stop recording")
 
 transcriber = AudioTranscription()
