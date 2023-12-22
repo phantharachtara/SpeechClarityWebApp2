@@ -1,0 +1,12 @@
+numpy
+spacy
+scikit-learn
+matplotlib
+pandas
+plotly
+speechrecognition
+nltk
+textstat
+sumy
+streamlit
+spacy-streamlit
