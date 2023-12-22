@@ -1,4 +1,1 @@
-build-essential
-pkg-config
 ffmpeg
-ffprobe
