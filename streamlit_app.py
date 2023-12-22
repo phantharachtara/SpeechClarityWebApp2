@@ -6,6 +6,7 @@ from audiorecorder import audiorecorder
 import pickle
 from spacy_streamlit import visualize_parser
 st.set_page_config(layout='wide')
+import ffmpeg
 
 # Generate big title
 big_title = '<b style="font-family:sans-serif; color:Black; font-size:40px;">How good are your explanations?</b>'

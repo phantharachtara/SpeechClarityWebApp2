@@ -9,6 +9,6 @@ textstat
 sumy
 streamlit
 spacy-streamlit
+ffmpeg-python
 streamlit-audiorecorder
 pydub
-ffmpeg-python
