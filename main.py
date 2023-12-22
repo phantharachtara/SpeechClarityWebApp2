@@ -25,7 +25,8 @@ advisor = SentenceRefiner()
 
 if len(audio) > 0:
     st.audio(audio.export().read())  
-    data_path = "temp_data/audio.wav"
+    data_path = "audio.wav"
+    # data_path = "temp_data/audio.wav"
     audio.export(data_path, format="wav",bitrate=16000)
     text = transcriber.process_audio_file(data_path)
 
