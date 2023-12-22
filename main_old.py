@@ -2,8 +2,7 @@ from utils.AudioTranscription import *
 from utils.SentenceAnalysis import *
 import os
 import streamlit as st
-from st_audiorec import st_audiorec
-from pydub import AudioSegment 
+from audiorecorder import audiorecorder
 import pickle
 from spacy_streamlit import visualize_parser
 st.set_page_config(layout='wide')
@@ -17,21 +16,18 @@ st.write('---')
 
 st.markdown('<b style="font-family:sans-serif; color:Black; font-size:30px;">Record yourself explaining something</b>',unsafe_allow_html=True)
 st.write(os.listdir())
-audio = st_audiorec() 
-
+audio = audiorecorder("Click to record", "Click to stop recording")
 print('hello')
 transcriber = AudioTranscription()
 # analyzer = pickle.load(open('models/medium_brown_analyzer.pkl','rb'))
 analyzer = pickle.load(open('models/small_reuters_analyzer.pkl','rb'))
 advisor = SentenceRefiner()
 
-if audio is not None:
-    audio = AudioSegment(audio)
-    
+if len(audio) > 0:
+    st.audio(audio.export().read())  
     data_path = "audio.wav"
     # data_path = "temp_data/audio.wav"
     audio.export(data_path, format="wav",bitrate=16000)
-    # audio.export(wav_path,format="wav")
     text = transcriber.process_audio_file(data_path)
 
   

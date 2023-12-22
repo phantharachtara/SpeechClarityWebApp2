@@ -11,4 +11,5 @@ streamlit
 spacy-streamlit
 ffmpeg-python
 streamlit-audiorecorder
+streamlit-audiorec
 pydub
