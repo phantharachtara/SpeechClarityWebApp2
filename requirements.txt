@@ -1,3 +1,4 @@
+streamlit-audiorec
 numpy
 scikit-learn
 matplotlib
@@ -10,5 +11,5 @@ sumy
 streamlit
 spacy-streamlit
 streamlit-audiorecorder
-streamlit-audiorec
+
 pydub
