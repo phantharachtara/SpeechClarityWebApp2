@@ -10,3 +10,5 @@ textstat
 sumy
 streamlit
 spacy-streamlit
+streamlit-audiorecorder
+pydub
