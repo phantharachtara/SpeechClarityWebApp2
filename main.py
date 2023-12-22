@@ -16,10 +16,8 @@ st.markdown(big_title,unsafe_allow_html=True)
 st.write('---')
 
 st.markdown('<b style="font-family:sans-serif; color:Black; font-size:30px;">Record yourself explaining something</b>',unsafe_allow_html=True)
-st.write(os.listdir())
 audio = st_audiorec() 
 
-print('hello')
 transcriber = AudioTranscription()
 # analyzer = pickle.load(open('models/medium_brown_analyzer.pkl','rb'))
 analyzer = pickle.load(open('models/small_reuters_analyzer.pkl','rb'))
