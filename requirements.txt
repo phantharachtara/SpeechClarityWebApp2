@@ -11,3 +11,4 @@ streamlit
 spacy-streamlit
 streamlit-audiorecorder
 pydub
+ffmpeg-python
