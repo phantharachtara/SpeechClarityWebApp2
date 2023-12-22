@@ -8,11 +8,13 @@ import nltk
 from nltk.tokenize import sent_tokenize
 
 import spacy
+import pickle
 
 class AudioTranscription():
     
     def __init__(self):
-        self.nlp = spacy.load("en_core_web_sm")
+        # self.nlp = spacy.load("en_core_web_sm")
+        self.nlp = pickle.load(open('models/en_core_web_sm.pkl','rb'))
     
     def recognize_speech(self,recognizer,audio_data):
         ''' Takes speech recognizer instance and sr.AudioData as inputs
