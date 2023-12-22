@@ -1,6 +1,5 @@
 numpy
 scikit-learn
-ffmpeg
 matplotlib
 pandas
 plotly
