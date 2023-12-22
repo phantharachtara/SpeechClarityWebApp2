@@ -1,6 +1,10 @@
 from utils.SentenceAnalysis import *
 import pickle
 
+nlp = spacy.load('en_core_web_sm')
+# dump the nlp model into models folder
+pickle.dump(nlp,open('models/en_core_web_sm.pkl','wb'))
+
 analyzer = SentenceAnalyzer(base_corpus='reuters')
 
 # sentences = brown.sents()

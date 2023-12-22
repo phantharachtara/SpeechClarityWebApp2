@@ -11,9 +11,11 @@ nltk.download('punkt')
 nltk.download('maxent_ne_chunker')
 nltk.download('words')
 # Spacy imports
+import pickle
 import spacy
 from spacy import displacy
-nlp = spacy.load("en_core_web_sm")
+# nlp = spacy.load("en_core_web_sm")
+nlp = pickle.load(open('models/en_core_web_sm.pkl','rb'))
 
 # Other imports
 import numpy as np
